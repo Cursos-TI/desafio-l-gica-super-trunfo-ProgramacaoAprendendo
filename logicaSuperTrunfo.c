@@ -119,11 +119,11 @@ int main() {
     case 1:
         if (populacao > populacaodois)
         {
-            printf("Cidade 1 tem maior população.\n");
+            printf("Carta 1 tem maior população.\n");
         }
         else if (populacaodois > populacao)
         {
-            printf("Cidade 2 tem maior população.\n");
+            printf("Carta 2 tem maior população.\n");
         }
         else
         {
@@ -134,11 +134,11 @@ int main() {
         case 2:
         if (area > areadois)
         {
-            printf("Cidade 1 tem maior área.\n");
+            printf("Carta 1 tem maior área.\n");
         }
         else if (areadois > area)
         {
-            printf("Cidade 2 tem maior área.\n");
+            printf("Carta 2 tem maior área.\n");
         }
         else
         {
@@ -149,11 +149,11 @@ int main() {
         case 3:
         if (pib > pibdois)
         {
-            printf("Cidade 1 tem maior PIB.\n");
+            printf("Carta 1 tem maior PIB.\n");
         }
         else if (pibdois > pib)
         {
-            printf("Cidade 2 tem maior PIB.\n");
+            printf("Carta 2 tem maior PIB.\n");
         }
         else
         {
@@ -164,11 +164,11 @@ int main() {
         case 4:
         if (turisticos > turisticosdois)
         {
-            printf("Cidade 1 tem maior população.\n");
+            printf("Carta 1 tem maior população.\n");
         }
         else if (turisticosdois > turisticos)
         {
-            printf("Cidade 2 tem maior população.\n");
+            printf("Carta 2 tem maior população.\n");
         }
         else
         {
@@ -179,11 +179,11 @@ int main() {
         case 5:
         if (densidade < densidadedois)
         {
-            printf("Cidade 1 tem menor densidade.\n");
+            printf("Carta 1 tem menor densidade.\n");
         }
         else if (densidadedois < densidade)
         {
-            printf("Cidade 2 tem menor densidade.\n");
+            printf("Carta 2 tem menor densidade.\n");
         }
         else
         {
@@ -194,11 +194,11 @@ int main() {
         case 6:
         if (capita > capitadois)
         {
-            printf("Cidade 1 tem maior capita.\n");
+            printf("Carta 2 tem maior capita.\n");
         }
         else if (capitadois > capita)
         {
-            printf("Cidade 1 tem maior capita.\n");
+            printf("Carta 2 tem maior capita.\n");
         }
         else
         {
@@ -209,11 +209,11 @@ int main() {
         case 7:
         if (superpoderum > superpoderdois)
         {
-            printf("Cidade 1 tem maior Super Poder.\n");
+            printf("Carta 2 tem maior Super Poder.\n");
         }
         else if (superpoderdois > superpoderum)
         {
-            printf("Cidade 1 tem maior Super Poder.\n");
+            printf("Carta 2 tem maior Super Poder.\n");
         }
         else
         {
@@ -232,11 +232,11 @@ int main() {
 
     if (superpoderum > superpoderdois)
     {
-        printf("A cidade vencedora é: %s\n", nome);
+        printf("A carta vencedora é: Carta 1.\n");
     }
     else
     {
-        printf("A cidade vencedora é: %s\n", nomedois);
+        printf("A cidade vencedora é: Carta 2.\n");
     }
 
     return 0;
