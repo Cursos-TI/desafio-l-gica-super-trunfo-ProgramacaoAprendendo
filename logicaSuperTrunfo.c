@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 // Desafio Super Trunfo - Países
 // Tema 2 - Comparação das Cartas
@@ -18,7 +20,8 @@ int main() {
      float densidade, densidadedois;
      float capita, capitadois;
      float superpoderum, superpoderdois;
-    
+     int escolhaJogador;
+    srand(time(0));
     // Cadastro das Cartas:
     // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
     // utilizando a função scanf para capturar as entradas.
@@ -45,6 +48,12 @@ int main() {
      printf("Número de pontos turísticos da cidade 1: \n");
      scanf("%d", &turisticos);
 
+    densidade = populacao / area;
+
+    capita = pib / populacao;
+
+    superpoderum = populacao + area + pib + turisticos + capita + (1 / densidade);
+
      printf("Estado da cidade 2: \n");
      scanf(" %c", &estadodois);
      printf("Código da cidade 2: \n");
@@ -59,25 +68,140 @@ int main() {
      scanf("%f", &pibdois);
      printf("Número de pontos turísticos da cidade 2: \n");
      scanf("%d", &turisticosdois);
- 
+
+    densidadedois = populacaodois / areadois;
+
+    capitadois = pibdois / populacaodois;
+
+    superpoderdois = populacaodois + areadois + pibdois + turisticosdois + capitadois + (1 / densidadedois);
 
     // Comparação de Cartas:
     // Desenvolva a lógica de comparação entre duas cartas.
     // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
 
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
-    if (populacao > populacaodois) {
-             printf("Cidade 1 tem maior população.\n");
-             printf("A cidade vencedora é: %s\n", nome);
-         } else {
-             printf("Cidade 2 tem maior população.\n");
-             printf("A cidade vencedora é: %s\n", nomedois);
-         }
+    printf("Comparação das cartas:\n");
+    printf("1 - População\n");
+    printf("2 - Área\n");
+    printf("3 - PIB\n");
+    printf("4 - Pontos Turísticos\n");
+    printf("5 - Densidade\n");
+    printf("6 - Capita\n");
+    printf("7 - Super Poder\n");
+    printf("Escolha: ");
+    scanf("%d", &escolhaJogador);
+
+    switch (escolhaJogador)
+    {
+    case 1:
+        if (populacao > populacaodois)
+        {
+            printf("Cidade 1 tem maior população.\n");
+        }
+        else if (populacaodois > populacao)
+        {
+            printf("Cidade 2 tem maior população.\n");
+        }
+        else
+        {
+            printf("Empatou!.\n");
+        }
+        
+        break;
+        case 2:
+        if (area > areadois)
+        {
+            printf("Cidade 1 tem maior área.\n");
+        }
+        else if (areadois > area)
+        {
+            printf("Cidade 2 tem maior área.\n");
+        }
+        else
+        {
+            printf("Empatou!.\n");
+        }
+        
+        break;
+        case 3:
+        if (pib > pibdois)
+        {
+            printf("Cidade 1 tem maior PIB.\n");
+        }
+        else if (pibdois > pib)
+        {
+            printf("Cidade 2 tem maior PIB.\n");
+        }
+        else
+        {
+            printf("Empatou!.\n");
+        }
+        
+        break;
+        case 4:
+        if (turisticos > turisticosdois)
+        {
+            printf("Cidade 1 tem maior população.\n");
+        }
+        else if (turisticosdois > turisticos)
+        {
+            printf("Cidade 2 tem maior população.\n");
+        }
+        else
+        {
+            printf("Empatou!.\n");
+        }
+        
+        break;
+        case 5:
+        if (densidade < densidadedois)
+        {
+            printf("Cidade 1 tem menor densidade.\n");
+        }
+        else if (densidadedois < densidade)
+        {
+            printf("Cidade 2 tem menor densidade.\n");
+        }
+        else
+        {
+            printf("Empatou!.\n");
+        }
+        
+        break;
+        case 6:
+        if (capita > capitadois)
+        {
+            printf("Cidade 1 tem maior capita.\n");
+        }
+        else if (capitadois > capita)
+        {
+            printf("Cidade 1 tem maior capita.\n");
+        }
+        else
+        {
+            printf("Empatou!.\n");
+        }
+        
+        break;
+        case 7:
+        if (superpoderum > superpoderdois)
+        {
+            printf("Cidade 1 tem maior Super Poder.\n");
+        }
+        else if (superpoderdois > superpoderum)
+        {
+            printf("Cidade 1 tem maior Super Poder.\n");
+        }
+        else
+        {
+            printf("Empatou!.\n");
+        }
+        
+        break;
+    default:
+        printf("Opção Inválida.\n");
+        break;
+    }
+    
     // Exibição dos Resultados:
     // Após realizar as comparações, exiba os resultados para o usuário.
     // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
