@@ -194,6 +194,8 @@ int main() {
         printf("Atributo: %d\n", primeiroAtributo);
     } else if (resultado1 != resultado2){
         printf("Carta 1 e Carta 2 empataram!.\n");
+        printf("Atributo Carta 1: %d\n", primeiroAtributo);
+        printf("Atributo Carta 2: %d\n", segundoAtributo);
     } else {
         printf("Carta 2 venceu.\n");
         printf("Atributo: %d\n", segundoAtributo);
